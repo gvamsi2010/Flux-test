@@ -1,3 +1,4 @@
 resources: 
 - redis-deployment.yaml
 - ngnix-deployment.yaml
+- prometheus-deployment.yaml
