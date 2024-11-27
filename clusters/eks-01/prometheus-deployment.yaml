@@ -4,6 +4,8 @@ metadata:
   name: prometheus
   namespace: monitoring # Ensure this namespace exists or create it
 spec:
+  install:
+    createNamespace: true
   chart:
     spec:
       chart: prometheus
