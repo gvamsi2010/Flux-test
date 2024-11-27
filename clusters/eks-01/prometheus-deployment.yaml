@@ -1,8 +1,32 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
 metadata:
-  name: prometheus-community
-  namespace: default
+  name: prometheus
+  namespace: monitoring # Ensure this namespace exists or create it
 spec:
-  interval: 1h
-  url: https://prometheus-community.github.io/helm-charts
+  chart:
+    spec:
+      chart: prometheus
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+        namespace: flux-system
+      version: latest # Replace with the desired chart version
+  interval: 5m
+  values:
+    alertmanager:
+      enabled: true
+    server:
+      global:
+        scrape_interval: 15s
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512Mi
+        requests:
+          cpu: 250m
+          memory: 256Mi
+    nodeExporter:
+      enabled: true
+    kubeStateMetrics:
+      enabled: true
