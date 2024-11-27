@@ -2,6 +2,5 @@ resources:
 - redis-deployment.yaml
 - ngnix-deployment.yaml
 - prometheus-deployment.yaml
-- prometheus-config.yaml
-- grafana-deployment.yaml
-- grafana-service.yaml
+# - grafana-deployment.yaml
+# - grafana-service.yaml

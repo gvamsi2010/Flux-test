@@ -1,31 +1,8 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
 metadata:
-  name: prometheus-deployment
-  namespace: default
+  name: prometheus-community
+  namespace: flux-system
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: prometheus
-  template:
-    metadata:
-      labels:
-        app: prometheus
-    spec:
-      containers:
-      - name: prometheus
-        image: prom/prometheus:latest
-        ports:
-        - containerPort: 9090
-        volumeMounts:
-        - name: prometheus-config-volume
-          mountPath: /etc/prometheus/
-        - name: prometheus-storage-volume
-          mountPath: /prometheus
-      volumes:
-      - name: prometheus-config-volume
-        configMap:
-          name: prometheus-config
-      - name: prometheus-storage-volume
-        emptyDir: {}
+  interval: 1h
+  url: https://prometheus-community.github.io/helm-charts
