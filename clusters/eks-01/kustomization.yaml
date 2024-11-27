@@ -4,6 +4,6 @@ resources:
 - prometheus-deployment.yaml
 - prometheus-helm-repo.yaml
 - kyverno-policy.yaml
-- helm-repo-kyverno
+- helm-repo-kyverno.yaml
 # - grafana-deployment.yaml
 # - grafana-service.yaml
