@@ -3,5 +3,6 @@ resources:
 - ngnix-deployment.yaml
 - prometheus-deployment.yaml
 - prometheus-helm-repo.yaml
+- kevypolicy.yaml
 # - grafana-deployment.yaml
 # - grafana-service.yaml
