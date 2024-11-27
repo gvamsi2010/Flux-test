@@ -1,0 +1,25 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: ensure-namespaces-exist
+spec:
+  rules:
+    - name: create-namespace
+      match:
+        resources:
+          kinds:
+            - Pod # Match all resources or a subset (e.g., Deployments, HelmReleases)
+      context:
+        - name: namespaceExists
+          apiCall:
+            urlPath: "/api/v1/namespaces/{{ request.object.metadata.namespace }}"
+      preconditions:
+        all:
+          - key: "{{ namespaceExists.response.status }} "
+            operator: Equals
+            value: "Failure"
+      mutate:
+        patchesJson6902: |
+          - op: add
+            path: /spec/template/spec/namespace
+            value: "{{ request.object.metadata.namespace }}"
