@@ -3,7 +3,7 @@ resources:
 - ngnix-deployment.yaml
 - prometheus-deployment.yaml
 - prometheus-helm-repo.yaml
-- kyverno-policy.yaml
-- helm-repo-kyverno.yaml
+# - kyverno-policy.yaml
+# - helm-repo-kyverno.yaml
 # - grafana-deployment.yaml
 # - grafana-service.yaml
