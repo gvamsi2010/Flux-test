@@ -11,7 +11,7 @@ spec:
       chart: prometheus
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community
+        name: default-prometheus
         namespace: flux-system
       version: latest # Replace with the desired chart version
   interval: 5m
