@@ -5,7 +5,7 @@ resources:
 - prometheus-helm-repo.yaml
 - grafana-deployment.yaml
 - grafana-service.yaml
-# - storage-class.yaml
+- storage-class.yaml
 # - aws-ebs-csi-driver-helm-repo.yaml
 # - aws-ebs-csi-driver-helm-release.yaml
 # - aws-ebs-csi-git.yaml
