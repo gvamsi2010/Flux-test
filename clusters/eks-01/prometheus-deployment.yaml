@@ -8,7 +8,7 @@ spec:
     createNamespace: true
   chart:
     spec:
-      chart: prometheus-community
+      chart: prometheus
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
