@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: "./aws-ebs-csi-driver"
+  path: "https://github.com/kubernetes-sigs/aws-ebs-csi-driver"
   prune: true
   sourceRef:
     kind: GitRepository
