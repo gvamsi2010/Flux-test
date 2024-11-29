@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
-      version: latest # Replace with the desired chart version
+      version: 15.0.0 # Replace with the desired chart version
   interval: 5m
   releaseName: prometheus
   values:
