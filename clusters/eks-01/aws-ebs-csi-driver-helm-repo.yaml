@@ -5,4 +5,4 @@ metadata:
   namespace: kube-system
 spec:
   interval: 1m
-  url: https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+  url: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
