@@ -14,5 +14,5 @@ spec:
         name: aws-ebs-csi-driver
         namespace: flux-system
       version: 1.37.0 # Replace with the desired chart version
-  interval: 5m
+  interval: 15m
   values: {}
