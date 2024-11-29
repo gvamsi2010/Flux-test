@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
       version: latest # Replace with the desired chart version
   interval: 5m
-  ReleaseName: prometheus
+  releaseName: prometheus
   values:
     alertmanager:
       enabled: true
