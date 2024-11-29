@@ -8,10 +8,10 @@ spec:
     createNamespace: true
   chart:
     spec:
-      chart: prometheus
+      chart: prometheus-community
       sourceRef:
         kind: HelmRepository
-        name: default-prometheus
+        name: prometheus-community
         namespace: flux-system
       version: latest # Replace with the desired chart version
   interval: 5m
