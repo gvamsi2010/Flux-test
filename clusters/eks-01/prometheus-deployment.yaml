@@ -22,6 +22,10 @@ spec:
     server:
       global:
         scrape_interval: 15s
+      persistentVolume:
+        enabled: true
+        storageClass: standard
+        size: 8Gi
       resources:
         limits:
           cpu: 500m
